@@ -14,9 +14,11 @@ import { defineConfig } from 'vite'
 // })
 
 // vite.config.js
+
+// vite.config.js
 export default defineConfig({
     build: {
-      target: 'esnext',
+      outDir: 'dist'
     },
     optimizeDeps: {
       include: ['leaflet', 'axios']
@@ -25,28 +27,28 @@ export default defineConfig({
     pages: {
       index: {
         // entry for the page
-        entry: 'index.html',
+        entry: 'client/index.html',
         // the source template
-        template: 'index.html',
+        template: 'client/index.html',
         // output as dist/index.html
         filename: 'index.html'
       },
       map: {
         // entry for the page
-        entry: 'nested/map.html',
+        entry: 'client/map.html',
         // the source template
-        template: 'nested/map.html',
+        template: 'client/map.html',
         // output as dist/map/index.html
-        filename: 'map.html'
+        filename: 'map/index.html'
       },
       text: {
         // entry for the page
-        entry: 'nested/text.html',
+        entry: 'client/text.html',
         // the source template
-        template: 'nested/text.html',
+        template: 'client/text.html',
         // output as dist/text/index.html
-        filename: 'text.html'
+        filename: 'text/index.html'
       }
-    },
+    }
   })
   
