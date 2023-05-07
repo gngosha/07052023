@@ -25,27 +25,27 @@ export default {
     pages: {
       index: {
         // entry for the page
-        entry: 'client/index.html',
+        entry: 'index.html',
         // the source template
-        template: 'client/index.html',
+        template: 'index.html',
         // output as dist/index.html
         filename: 'index.html'
       },
       map: {
         // entry for the page
-        entry: 'client/map.html',
+        entry: 'nested/map.html',
         // the source template
-        template: 'client/map.html',
+        template: 'nested/map.html',
         // output as dist/map/index.html
-        filename: 'map/index.html'
+        filename: 'nested/map.html'
       },
       text: {
         // entry for the page
-        entry: 'client/text.html',
+        entry: 'nested/text.html',
         // the source template
-        template: 'client/text.html',
+        template: 'nested/text.html',
         // output as dist/text/index.html
-        filename: 'text/index.html'
+        filename: 'nested/text.html'
       }
     },
   }
