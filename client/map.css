@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+body {
+    background:linear-gradient( #009dc4, #8dd8cc);
+    
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+svg path {
+    fill: white;
+    stroke: #00394b;
+    stroke-width: .5;
+}
+
+#name {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: fit-content;
+    opacity: 0;
+    border-radius: 5px;
+    border: 3px solid #00ff95;
+    padding: 0px 5px;
+    font-size: 1.5rem;
+
+}
+
+.cringe {
+    position: absolute;
+    right: 0;
+    margin-top: 0.2rem;
+    
+}
+
+.lol {
+    box-shadow: 0 0 16px rgba(29, 160, 153, 1);
+    -moz-box-shadow: 0 0 16px rgba(29, 160, 153, 1);
+    -webkit-box-shadow: 0 0 16px rgba(29, 160, 153, 1);
+}
+
+.tries {
+    box-shadow: 0 0 16px rgba(29, 160, 153, 1);
+    -moz-box-shadow: 0 0 16px rgba(29, 160, 153, 1);
+    -webkit-box-shadow: 0 0 16px rgba(29, 160, 153, 1);
+}
+
+.tries-success {
+    box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -moz-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -webkit-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    background-color: rgb(92, 183, 92);
+}
+
+.tries-failure {
+    box-shadow: 0 0 16px rgba(255, 0, 0, 1);
+    -moz-box-shadow: 0 0 16px rgba(255, 0, 0, 1);
+    -webkit-box-shadow: 0 0 16px rgba(255, 0, 0, 1);
+    background-color: rgb(255, 0, 0, 92);
+}
+
+.not-yet {
+    box-shadow: 0 0 16px rgba(255, 0, 0, 1);
+    -moz-box-shadow: 0 0 16px rgba(255, 0, 0, 1);
+    -webkit-box-shadow: 0 0 16px rgba(255, 0, 0, 1);
+}

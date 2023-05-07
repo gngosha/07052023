@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+}
+
+
+.hero {
+    display: flex;
+    place-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+    position: relative;
+    isolation: isolate;
+    background-color: black;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: 0.8;
+    background-image: url('./img/Geography.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.img1 {
+    display: grid;
+    place-content: center;
+    padding: 0;
+    height: 576px;
+    width: 280px;
+    border-radius: 2%;
+    font-size: larger;
+    background-image: url(./img/text.jpg);
+    z-index: 500;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    
+}
+
+.img2 {
+    display: grid;
+    place-content: center;
+    padding: 0;
+    height: 576px;
+    width: 280px;
+    border-radius: 2%;
+    font-size: larger;
+    background-image: url(./img/nnnnnn.jpg);
+    
+    z-index: 500;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+a:link{
+    color: aliceblue;
+    text-decoration: none!important;
+  }
+  
+.img1:hover {
+    box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -moz-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -webkit-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+}
+
+.img2:hover {
+    box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -moz-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -webkit-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+}
+
+.parent {
+    color: aliceblue;
+    text-decoration: none!important;
+    font-size: 46px;
+    font-family:'Times New Roman', Times, serif;
+    text-shadow: 3px 1px #009dc4;
+}
+
+h1 {
+    position: absolute;
+    top: 40px;
+    color: white;
+    font-family:'Times New Roman', Times, serif;
+    border-bottom: 3px solid #8dd8cc;
+}

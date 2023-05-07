@@ -1,0 +1,28 @@
+body {
+  background-image: url(./img/planet.webp);
+  background-size: cover;
+}
+
+.lol {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+}
+
+.nounderline {
+  text-decoration: none !important
+}
+
+.tries-success {
+  box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+  -moz-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+  -webkit-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+  background-color: rgb(92, 183, 92);
+}
+
+.tries-failure {
+  box-shadow: 0 0 16px rgba(255, 0, 0, 1);
+  -moz-box-shadow: 0 0 16px rgba(255, 0, 0, 1);
+  -webkit-box-shadow: 0 0 16px rgba(255, 0, 0, 1);
+  background-color: rgb(255, 0, 0, 92);
+}
