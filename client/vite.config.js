@@ -37,7 +37,7 @@ export default {
         // the source template
         template: 'nested/map.html',
         // output as dist/map/index.html
-        filename: 'nested/map.html'
+        filename: 'map/index.html'
       },
       text: {
         // entry for the page
@@ -45,7 +45,7 @@ export default {
         // the source template
         template: 'nested/text.html',
         // output as dist/text/index.html
-        filename: 'nested/text.html'
+        filename: 'text/index.html'
       }
     },
   }
