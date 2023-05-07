@@ -9,5 +9,6 @@ export default defineConfig({
         nested: resolve(__dirname, 'nested/text.html'),
       },
     },
+    target: 'esnext',
   },
 })
