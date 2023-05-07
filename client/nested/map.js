@@ -1,7 +1,7 @@
 // import { riddle, country } from "../server/server"
 
 // fetch API from server
-const response = await fetch('http://localhost:5000', {
+const response = await fetch('https://zero7052023.onrender.com', {
     method: 'POST',
     headers: {
           'Content-Type': 'application/json',
