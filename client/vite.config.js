@@ -6,8 +6,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        nested: resolve(__dirname, 'nested/text.html'),
-        nested: resolve(__dirname, 'nested/map.html'),
+        nested: resolve(__dirname, 'nested/text.html', 'nested/map.html'),
       },
     },
     target: 'esnext',
