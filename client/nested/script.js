@@ -14,7 +14,7 @@ let generated = document.getElementById("generated");
 // trying to fetch data
 
 // const data = new FormData(form);
-
+// https://zero7052023.onrender.com
 const response = await fetch('http://localhost:5000', {
     method: 'POST',
     headers: {
