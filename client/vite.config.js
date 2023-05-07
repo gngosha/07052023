@@ -8,6 +8,10 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         nested: resolve(__dirname, 'nested/text.html'),
       },
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        nested: resolve(__dirname, 'nested/map.html'),
+      },
     },
     target: 'esnext',
   },
