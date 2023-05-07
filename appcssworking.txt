@@ -3,7 +3,6 @@
     padding: 0;
     margin: 0;
     overflow-y: hidden;
-    overflow-x: hidden;
 }
 
 
@@ -25,7 +24,7 @@
     z-index: -1;
     inset: 0;
     opacity: 0.8;
-    background-image: url('./img/pexels-blaque-x-932638.jpg');
+    background-image: url('./img/Geography.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -35,9 +34,9 @@
     display: grid;
     place-content: center;
     padding: 0;
-    height: 302px;
-    width: 453px;
-    border-radius: 3%;
+    height: 576px;
+    width: 280px;
+    border-radius: 2%;
     font-size: larger;
     background-image: url(./img/text.jpg);
     z-index: 500;
@@ -53,13 +52,13 @@
     display: grid;
     place-content: center;
     padding: 0;
-    height: 302px;
-    width: 453px;
-    border-radius: 3%;
+    height: 576px;
+    width: 280px;
+    border-radius: 2%;
     font-size: larger;
-    background-image: url(./img/flags.jpg);
+    background-image: url(./img/nnnnnn.jpg);
     
-    z-index: -1;
+    z-index: 500;
     background-size: cover;
     background-position: center;
     box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
@@ -71,11 +70,17 @@ a:link{
     color: aliceblue;
     text-decoration: none!important;
   }
+  
+.img1:hover {
+    box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -moz-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -webkit-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+}
 
-a:hover {
-    box-shadow: 0 0 5px rgba(255, 0, 0, 1);
-    background: linear-gradient(to right, red, orange);
-    border-radius: 3%;
+.img2:hover {
+    box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -moz-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
+    -webkit-box-shadow: 0 0 16px rgba(92, 183, 92, 1);
 }
 
 .parent {
