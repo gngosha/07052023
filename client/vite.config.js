@@ -7,7 +7,6 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         nested: resolve(__dirname, 'nested/text.html'),
-        nested: resolve(__dirname, 'nested/map.html')
       },
     },
   },
