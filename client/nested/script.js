@@ -47,7 +47,7 @@ down.classList = "lol card card-body text-center mt-5";
 console.log(country);
 let c = 1;
 if (generated.innerHTML !== '*Генерация страны*') {
-  document.getElementById('forn-group').innerHTML += `<input type="submit" value="Угадать!" class="guess btn btn-info btn-block mb-1" id="btn">
+  document.getElementById('forn-group').innerHTML += `<input type="submit" value="Угадать!" class="guess btn btn-info btn-block mb-1 mt-2" id="btn">
   <a href="./map.html" class="redirect nounderline "><input type="button" value="Угадать на карте!" class="guess btn btn-info btn-block" id="map"></a>
   `
 }
@@ -83,12 +83,13 @@ document.getElementById('btn').addEventListener('click', function(e){
         monthlyPayment.classList.add("bg-success");
         monthlyPayment.classList.add("tries-success");
         tries.innerHTML = 'Вы выиграли!';
-        tries.classList = "input-group-addon mb-3";
-        reload.innerHTML = 'Перезагрузка через 10 секунд...';
-        reload.classList = "input-group-addon bg-warning text-danger mb-3"
+        document.getElementById('tryAgain').innerHTML += `<input type="submit" value="Попробовать ещё!" class="yellow guess text-dark btn btn-warning btn-block mb-1 mt-3" id="reloadBtn">`;
+        document.getElementById('reloadBtn').addEventListener('click', () =>
         setTimeout(function(){
             window.location.reload();
-         }, 4000);
+          })
+        )
+        
     } else {
         monthlyPayment.value =`Нет...`;
         monthlyPayment.classList.add("bg-danger");
@@ -99,16 +100,16 @@ document.getElementById('btn').addEventListener('click', function(e){
             document.getElementById('btn').disabled = true;
             document.getElementById('map').disabled = true;
             tries.innerHTML = 'Вы проиграли!';
-            tries.classList = "input-group-addon mb-3"
             monthlyPayment.value =`Нет... Это ${country}`;
             monthlyPayment.classList.add("bg-danger");
             monthlyPayment.classList.add("tries-failure");
             monthlyPayment.classList.add("border-danger");
-            reload.innerHTML = 'Перезагрузка через 10 секунд...';
-            reload.classList = "input-group-addon bg-warning text-danger mb-3"
+            document.getElementById('tryAgain').innerHTML += `<input type="submit" value="Попробовать ещё!" class="yellow guess text-dark btn btn-warning btn-block mb-1 mt-3" id="reloadBtn">`;
+            document.getElementById('reloadBtn').addEventListener('click', () =>
             setTimeout(function(){
                 window.location.reload();
-             }, 4000);
+              })
+            )
         }
 
     }

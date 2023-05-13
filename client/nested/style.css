@@ -26,3 +26,13 @@ body {
   -webkit-box-shadow: 0 0 16px rgba(255, 0, 0, 1);
   background-color: rgb(255, 0, 0, 92);
 }
+
+.yellow {
+  box-shadow: 0 0 16px rgba(240, 173, 78, 1);
+  -moz-box-shadow: 0 0 16px rgba(240, 173, 78, 1);
+  -webkit-box-shadow: 0 0 16px rgba(240, 173, 78, 1);
+}
+
+a {
+  cursor: default !important;
+}

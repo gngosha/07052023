@@ -63,6 +63,12 @@ svg path {
     background-color: rgb(255, 0, 0, 92);
 }
 
+.tries-warning {
+    box-shadow: 0 0 16px rgba(240, 173, 78, 1);
+    -moz-box-shadow: 0 0 16px rgba(240, 173, 78, 1);
+    -webkit-box-shadow: 0 0 16px rgba(240, 173, 78, 1);
+}
+
 .not-yet {
     box-shadow: 0 0 16px rgba(255, 0, 0, 1);
     -moz-box-shadow: 0 0 16px rgba(255, 0, 0, 1);

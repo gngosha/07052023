@@ -1,6 +1,7 @@
 // import { riddle, country } from "../server/server"
 
 // fetch API from server
+// https://zero7052023.onrender.com
 const response = await fetch('https://zero7052023.onrender.com', {
     method: 'POST',
     headers: {
@@ -81,15 +82,27 @@ document.querySelectorAll(".allPaths").forEach(e => {
         // UI Vars
         
         if (country === e.id) {
-            document.getElementById('try').innerHTML = `Угадали. Страна - ${country}`;
+            document.getElementById('try').innerHTML = `Угадали. Страна - ${country} <br>`;
+            document.getElementById('try').innerHTML += 'Нажмите сюда, чтобы попробовать ещё!'
             k = 0;
             document.getElementById('try').classList = 'tries-success input-group-addon card card-body text-center mt-1 mb-2';
             document.getElementById('try').classList.add('text-white');
             e.style.fill = 'green'
+            document.getElementById('try').addEventListener('mouseover', async (e) => {
+                e.preventDefault()
+                document.getElementById('try').classList = 'bg-warning tries-warning input-group-addon card card-body text-dark text-center mt-1 mb-2';
+            })
+            document.getElementById('try').addEventListener('mouseleave', async (e) => {
+                e.preventDefault()
+                document.getElementById('try').classList = 'tries-failure input-group-addon card card-body text-center mt-1 mb-2';
+                document.getElementById('try').classList.add('text-white');
+            })
+            document.getElementById('try').addEventListener('click', () => {
                 setTimeout(function(){
                     //window.location.assign("text.html");
                     window.location.reload();
-                 }, 4000);
+                 });
+            })
         } else {
             e.style.fill = 'red'
             k = k - 1
@@ -98,14 +111,27 @@ document.querySelectorAll(".allPaths").forEach(e => {
                 document.getElementById('try').classList.add('not-yet');
             }
             if (k === 0) {
-                document.getElementById('try').innerHTML = `Слили. Страна - ${country}`;
+                document.getElementById('try').innerHTML = `Слили. Страна - ${country} <br>`;
+                document.getElementById('try').innerHTML += 'Нажмите сюда, чтобы попробовать ещё!'
                 document.getElementById('try').classList = 'tries-failure input-group-addon card card-body text-center mt-1 mb-2';
                 document.getElementById('try').classList.add('text-white');
+                document.getElementById('try').addEventListener('mouseover', async (e) => {
+                    e.preventDefault()
+                    document.getElementById('try').classList = 'bg-warning tries-warning input-group-addon card card-body text-dark text-center mt-1 mb-2';
+                })
+                document.getElementById('try').addEventListener('mouseleave', async (e) => {
+                    e.preventDefault()
+                    document.getElementById('try').classList = 'tries-failure input-group-addon card card-body text-center mt-1 mb-2';
+                    document.getElementById('try').classList.add('text-white');
+                })
                 e.style.fill = 'red'
-                setTimeout(function(){
-                    //window.location.assign("text.html");
-                    window.location.reload();
-                 }, 4000);
+                document.getElementById('try').addEventListener('click', () => {
+                    setTimeout(function(){
+                        //window.location.assign("text.html");
+                        window.location.reload();
+                     });
+                })
+                
             }
     
         }
