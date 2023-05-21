@@ -5,6 +5,7 @@ html {
 body {
   background-image: url(../img/planet.webp);
   background-size: cover;
+  height: 100vh;
 }
 
 .lol {
