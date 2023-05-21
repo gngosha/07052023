@@ -4,6 +4,10 @@
 
 }
 
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
     background:linear-gradient( #009dc4, #8dd8cc);
     
