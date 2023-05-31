@@ -118,6 +118,7 @@ document.getElementById('btn').addEventListener('click', function(e){
       }
     } else {
       monthlyPayment.value =`Это не страна!`;
+      monthlyPayment.classList.add('text-dark')
     }
 
       //show results
