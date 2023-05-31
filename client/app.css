@@ -7,7 +7,7 @@
     --spacing-l: 24px;
     --spacing-xl: 32px;
     --spacing-xxl: 64px;
-    --width-container: 1200px;
+    --width-container: 960px;
   }
   
   *{
@@ -15,13 +15,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
+    scroll-behavior: smooth;
   }
   
   html{
     height: 100%;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
+    overflow-y: hidden;
   }
   
   body{
@@ -30,7 +31,7 @@
 
   .hero-section{
     align-items: center;
-    background-image: linear-gradient(15deg, #373B44 0%, #4286f4 150%);
+    background-image: url(./img/frozen.jpg);
     display: flex;
     min-height: 100%;
     justify-content: center;
@@ -115,3 +116,64 @@
     text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
     line-height: 1.4;
   }
+
+
+/* Trying start */
+
+.start {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(./img/17947.jpg);
+  background-size: cover;
+}
+
+.content {
+  text-align: center;
+  color: #fff;
+}
+
+.main-heading {
+  font-size: 80px;
+  font-weight: 600;
+}
+
+.content a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 24px;
+  border: 3px solid #fff;
+  border-radius: 50px;
+  padding: 20px 50px 20px 50px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.content h1, a {
+  transition: 0.5s;
+}
+
+.content h1:hover {
+  -webkit-text-fill-color: azure;
+  color: transparent;
+  text-shadow: 1px 1px 20px pink;
+}
+
+.content a:hover {
+  text-shadow: 1px 1px 20px pink;
+  box-shadow: 1px 1px 40px pink;
+}
+
+.arrow {
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 60px;
+}
+
+.arrow:hover {
+  -webkit-text-fill-color: pink;
+}
