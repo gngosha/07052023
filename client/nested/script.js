@@ -47,7 +47,7 @@ down.classList = "lol card card-body text-center mt-5";
 console.log(country);
 let c = 1;
 if (generated.innerHTML !== '*Генерация страны*') {
-  document.getElementById('forn-group').innerHTML += `<input type="submit" value="Угадать!" class="guess btn btn-info btn-block mb-1 mt-2" id="btn">
+  document.getElementById('forn-group').innerHTML = `<input type="submit" value="Угадать!" class="guess btn btn-info btn-block mb-1 mt-2" id="btn">
   <a href="./map.html" class="redirect nounderline "><input type="button" value="Угадать на карте!" class="guess btn btn-info btn-block" id="map"></a>
   `
 }
@@ -78,7 +78,6 @@ document.getElementById('btn').addEventListener('click', function(e){
     if (principal === answer) {
         amount.disabled = true;
         document.getElementById('btn').disabled = true;
-        document.getElementById('map').disabled = true;
         monthlyPayment.value =`Да! Это ${country}`;
         monthlyPayment.classList.add("bg-success");
         monthlyPayment.classList.add("tries-success");
@@ -98,7 +97,6 @@ document.getElementById('btn').addEventListener('click', function(e){
         if (k === 0) {
             amount.disabled = true;
             document.getElementById('btn').disabled = true;
-            document.getElementById('map').disabled = true;
             tries.innerHTML = 'Вы проиграли!';
             monthlyPayment.value =`Нет... Это ${country}`;
             monthlyPayment.classList.add("bg-danger");
