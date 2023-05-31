@@ -117,9 +117,9 @@ document.getElementById('btn').addEventListener('click', function(e){
 
       }
     } else {
-      console.log('Не страна')
+      monthlyPayment.value =`Это не страна!`;
     }
-    
+
       //show results
       document.getElementById('results').style.display='block';
   
