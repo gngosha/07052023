@@ -12,7 +12,8 @@ export default defineConfig({
         tableMenu: resolve(__dirname, 'table/menu.html'),
         tablesVVP: resolve(__dirname, 'table/tables/vvp.html'),
         tablesICHR: resolve(__dirname, 'table/tables/ichr.html'),
-        tablesPopulation: resolve(__dirname, 'table/tables/population.html')
+        tablesPopulation: resolve(__dirname, 'table/tables/population.html'),
+        area: resolve(__dirname, 'table/piximaps-1.1.0/examples/geojson/map.world.html')
       },
     },
     target: 'esnext',
