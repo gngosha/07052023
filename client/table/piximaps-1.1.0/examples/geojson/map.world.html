@@ -15,6 +15,9 @@
       .pixi .charttitle .subtitle { font-size: 0.9em; font-style: italic; text-anchor: start; }
     </style>
     <script src="../../js/piximaps.min.js"></script>
+  </head>
+  <body>
+    <div id="chart1" class="pixi" style="margin-bottom: 15px;"></div>
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const map = {
@@ -219,8 +222,5 @@
         chart.overlayUpdate(countries);
       });
     </script>
-  </head>
-  <body>
-    <div id="chart1" class="pixi" style="margin-bottom: 15px;"></div>
   </body>
 </html>
