@@ -13,7 +13,7 @@ export default defineConfig({
         tablesVVP: resolve(__dirname, 'table/tables/vvp.html'),
         tablesICHR: resolve(__dirname, 'table/tables/ichr.html'),
         tablesPopulation: resolve(__dirname, 'table/tables/population.html'),
-        area: resolve(__dirname, 'table/piximaps-1.1.0/examples/geojson/map.world.html')
+        area: resolve(__dirname, 'table/tables/world/world-map.html')
       },
     },
     target: 'esnext',
