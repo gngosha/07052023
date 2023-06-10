@@ -2,6 +2,15 @@
 
 // fetch API from server
 // https://zero7052023.onrender.com
+let count_guessed = document.getElementById('guessed');
+let count_notguessed = document.getElementById('notguessed');
+if (sessionStorage.getItem('+') != null) {
+    count_guessed.innerHTML = sessionStorage.getItem('+');
+}
+if (sessionStorage.getItem('-') != null) {
+  count_notguessed.innerHTML = sessionStorage.getItem('-');
+}
+
 async function test() {
     let riddle;
     let country;
@@ -38,8 +47,8 @@ document.querySelectorAll(".allPaths").forEach(e => {
         if (k !== 0) {
             e.style.cursor = 'pointer';
             e.style.fill = "#00ff95";
-            document.getElementById('try').innerHTML = `Осталось попыток: ${k} <br>
-                Выбрано: ${e.id}`;
+            document.getElementById('try').innerHTML = `Осталось попыток: ${k} <br> 
+                Выбрано: ${e.id} <br> <span> Отгадано: <span class="text-success">${count_guessed.innerHTML}</span>&nbsp;&nbsp;&nbsp; Слито: <span class="text-danger">${count_notguessed.innerHTML}</span></span>`;
         }
         if (k === 0) {
             e.style.cursor = 'default';
@@ -48,7 +57,7 @@ document.querySelectorAll(".allPaths").forEach(e => {
 
     e.addEventListener("mouseleave", function () {   
         if (k !== 0) {
-            document.getElementById('try').innerHTML = `Осталось попыток: ${k} <br> *Выберите страну*`;
+            document.getElementById('try').innerHTML = `Осталось попыток: ${k} <br> *Выберите страну* <br> <span> Отгадано: <span class="text-success">${count_guessed.innerHTML}</span>&nbsp;&nbsp;&nbsp; Слито: <span class="text-danger">${count_notguessed.innerHTML}</span></span>`;
                 e.style.fill = "white";   
         }   
     })
@@ -69,8 +78,10 @@ document.querySelectorAll(".allPaths").forEach(e => {
 
     function GuessCountry(){
         if (country === e.id) {
-            document.getElementById('try').innerHTML = `Угадали. Страна - ${country} <br>`;
-            document.getElementById('try').innerHTML += 'Нажмите сюда, чтобы попробовать ещё!'
+            sessionStorage.setItem('+', JSON.parse(count_guessed.textContent) + 1);
+            count_guessed.innerHTML = sessionStorage.getItem('+');
+            document.getElementById('try').innerHTML = `Угадали. Страна - ${country} <br> `;
+            document.getElementById('try').innerHTML += `Нажмите сюда, чтобы попробовать ещё! <br> <span> Отгадано: <span class="text-light">${count_guessed.innerHTML}</span>&nbsp;&nbsp;&nbsp; Слито: <span class="text-light">${count_notguessed.innerHTML}</span></span>`
             k = 0;
             c = -1;
             document.getElementById('try').classList = 'tries-success input-group-addon card card-body text-center mt-1 mb-2';
@@ -95,12 +106,14 @@ document.querySelectorAll(".allPaths").forEach(e => {
             e.style.fill = 'red'
             k = k - 1
             if (k !== 0) {
-                document.getElementById('try').innerHTML = `Не угадали! <br> *Выберите страну*`;
+                document.getElementById('try').innerHTML = `Не угадали! <br> *Выберите страну* <br> <span> Отгадано: <span class="text-success">${count_guessed.innerHTML}</span>&nbsp;&nbsp;&nbsp; Слито: <span class="text-danger">${count_notguessed.innerHTML}</span></span>`;
                 document.getElementById('try').classList.add('not-yet');
             }
             if (k === 0) {
+                sessionStorage.setItem('-', JSON.parse(count_notguessed.textContent) + 1);
+                count_notguessed.innerHTML = sessionStorage.getItem('-');
                 document.getElementById('try').innerHTML = `Слили. Страна - ${country} <br>`;
-                document.getElementById('try').innerHTML += 'Нажмите сюда, чтобы попробовать ещё!'
+                document.getElementById('try').innerHTML += `Нажмите сюда, чтобы попробовать ещё! <br> <span> Отгадано: <span class="text-light">${count_guessed.innerHTML}</span>&nbsp;&nbsp;&nbsp; Слито: <span class="text-light">${count_notguessed.innerHTML}</span></span>`
                 document.getElementById('try').classList = 'tries-failure input-group-addon card card-body text-center mt-1 mb-2';
                 document.getElementById('try').classList.add('text-white');
                 document.getElementById('try').addEventListener('mouseover', async (e) => {

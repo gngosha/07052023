@@ -11,7 +11,14 @@ amount.value = '';
 let down = document.getElementById('down');
 let tries = document.getElementById('tries');
 let k = 3;
-
+let count_guessed = document.getElementById('guessed');
+let count_notguessed = document.getElementById('notguessed');
+if (sessionStorage.getItem('+') != null) {
+    count_guessed.innerHTML = sessionStorage.getItem('+');
+}
+if (sessionStorage.getItem('-') != null) {
+  count_notguessed.innerHTML = sessionStorage.getItem('-');
+}
 let reload = document.getElementById('reload');
 
 let generated = document.getElementById("generated");
@@ -81,6 +88,10 @@ document.getElementById('btn').addEventListener('click', function(e){
     const principal = amount.value.toLowerCase();
     if (list.includes(principal)) {
       if (principal === answer) {
+        // console.log(typeof(JSON.parse(count_guessed.textContent)))
+        sessionStorage.setItem('+', JSON.parse(count_guessed.textContent) + 1);
+        count_guessed.innerHTML = sessionStorage.getItem('+');
+        // sessionStorage.setItem('-', JSON.parse(count_notguessed.value));
         amount.disabled = true;
         document.getElementById('btn').disabled = true;
         monthlyPayment.value =`Да! Это ${country}`;
@@ -100,6 +111,10 @@ document.getElementById('btn').addEventListener('click', function(e){
           k = k - 1
           tries.innerHTML = `Осталось попыток: ${k}`;
           if (k === 0) {
+            // console.log(count_notguessed.textContent)
+            // sessionStorage.setItem('+', JSON.parse(count_guessed.value));
+            sessionStorage.setItem('-', JSON.parse(count_notguessed.textContent) + 1);
+            count_notguessed.innerHTML = sessionStorage.getItem('-');
               amount.disabled = true;
               document.getElementById('btn').disabled = true;
               tries.innerHTML = 'Вы проиграли!';

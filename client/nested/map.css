@@ -87,10 +87,16 @@ body {
 }
 .cringe {
     position: absolute;
-    right: 0;
-    margin-top: 0.2rem;
+    right: 0%;
     z-index: 999;
     
+}
+
+.cringe2{
+  position: absolute;
+  right: 35%;
+  z-index: 999;
+  
 }
 
 .lol {
