@@ -52,10 +52,10 @@ if (response.ok) {
 }
 
 if (riddle.includes(country)) {
+  window.alert('Некорректное описание, перезагрузка страницы')
   setTimeout(function(){
     window.location.reload();
-  }, 5000)
-  window.alert('Некорректное описание, перезагрузка страницы')
+  })
 }
 
 generated.innerHTML = `${riddle}`;

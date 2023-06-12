@@ -81,7 +81,7 @@ document.querySelectorAll(".allPaths").forEach(e => {
             sessionStorage.setItem('+', JSON.parse(count_guessed.textContent) + 1);
             count_guessed.innerHTML = sessionStorage.getItem('+');
             document.getElementById('try').innerHTML = `Угадали. Страна - ${country} <br> `;
-            document.getElementById('try').innerHTML += `Нажмите сюда, чтобы попробовать ещё! <br> <span> Отгадано: <span class="text-light">${count_guessed.innerHTML}</span>&nbsp;&nbsp;&nbsp; Слито: <span class="text-light">${count_notguessed.innerHTML}</span></span>`
+            document.getElementById('try').innerHTML += `Попробовать ещё! <br> <span> Отгадано: <span class="text-light">${count_guessed.innerHTML}</span>&nbsp;&nbsp;&nbsp; Слито: <span class="text-light">${count_notguessed.innerHTML}</span></span>`
             k = 0;
             c = -1;
             document.getElementById('try').classList = 'tries-success input-group-addon card card-body text-center mt-1 mb-2';
@@ -113,7 +113,7 @@ document.querySelectorAll(".allPaths").forEach(e => {
                 sessionStorage.setItem('-', JSON.parse(count_notguessed.textContent) + 1);
                 count_notguessed.innerHTML = sessionStorage.getItem('-');
                 document.getElementById('try').innerHTML = `Слили. Страна - ${country} <br>`;
-                document.getElementById('try').innerHTML += `Нажмите сюда, чтобы попробовать ещё! <br> <span> Отгадано: <span class="text-light">${count_guessed.innerHTML}</span>&nbsp;&nbsp;&nbsp; Слито: <span class="text-light">${count_notguessed.innerHTML}</span></span>`
+                document.getElementById('try').innerHTML += `Попробовать ещё! <br> <span> Отгадано: <span class="text-light">${count_guessed.innerHTML}</span>&nbsp;&nbsp;&nbsp; Слито: <span class="text-light">${count_notguessed.innerHTML}</span></span>`
                 document.getElementById('try').classList = 'tries-failure input-group-addon card card-body text-center mt-1 mb-2';
                 document.getElementById('try').classList.add('text-white');
                 document.getElementById('try').addEventListener('mouseover', async (e) => {

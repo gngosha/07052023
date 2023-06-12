@@ -5,6 +5,7 @@
 
 html {
     font-family: 'Montserrat', sans-serif;
+    overflow: auto;
 }
 
 body {
@@ -85,6 +86,7 @@ body {
 #try {
     z-index: 999;
 }
+
 .cringe {
     position: absolute;
     right: 0%;

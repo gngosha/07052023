@@ -802,7 +802,7 @@ document.querySelectorAll(".allPaths").forEach(e => {
 
 
 
-
+let trry = document.getElementById('try');
 let svg = document.querySelector("#svg");
 let viewport = document.querySelector("#viewport");
 let point = svg.createSVGPoint();
@@ -862,3 +862,36 @@ function onWheel(event) {
     
   zoom.animation = TweenLite.from(viewBox, zoom.duration, fromlets);  
 }
+
+trry.addEventListener("click", resetViewport);
+
+
+    let cachedViewBox = {
+        x: viewBox.x,
+        y: viewBox.y,
+        width: viewBox.width,
+        height: viewBox.height
+    };
+
+    function resetViewport() {
+        let resetAnimation = new TimelineLite();
+
+        let duration = 0;
+        let ease = Power3.easeOut;
+        
+        resetAnimation.clear()
+        .to(viewBox, duration, {
+            x: cachedViewBox.x,
+            y: cachedViewBox.y,
+            width: cachedViewBox.width,
+            height: cachedViewBox.height,
+            ease: ease
+        }, 0)
+        .to(viewport, duration, {
+            attr: { transform: "matrix(1,0,0,1,0,0)" },
+            // rotation: "0_short",
+            smoothOrigin: false,
+            svgOrigin: "0 0",
+            ease: ease
+        }, 0)
+    }
