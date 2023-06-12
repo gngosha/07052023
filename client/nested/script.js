@@ -8,6 +8,7 @@ const list = country_list.map(element => {
 
 const amount = document.getElementById('amount');
 amount.value = '';
+amount.disabled = true;
 let down = document.getElementById('down');
 let tries = document.getElementById('tries');
 let k = 3;
@@ -48,6 +49,13 @@ if (response.ok) {
 
     console.log("Something went wrong")
     console.log(err)
+}
+
+if (riddle.includes(country)) {
+  setTimeout(function(){
+    window.location.reload();
+  }, 5000)
+  window.alert('Некорректное описание, перезагрузка страницы')
 }
 
 generated.innerHTML = `${riddle}`;
