@@ -34,7 +34,13 @@ async function test() {
         console.log(err)
     }
 
-
+    if (riddle.includes(country)) {
+        window.alert('Некорректное описание, перезагрузка страницы')
+        setTimeout(function(){
+          window.location.reload();
+        })
+      }
+      
 let trry = document.getElementById('try');
 
 document.getElementById('bottomGuess').innerHTML = `${riddle}`
